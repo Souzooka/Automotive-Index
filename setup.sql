@@ -2,12 +2,15 @@
 DROP USER IF EXISTS indexed_cars_user;
 CREATE USER indexed_cars_user;
 
---switch to user
-SET ROLE indexed_cars_user;
-
 --create DB
 DROP DATABASE IF EXISTS indexed_cars;
 CREATE DATABASE indexed_cars;
+
+--alter owner
+ALTER DATABASE indexed_cars OWNER TO indexed_cars_user;
+
+--switch to user
+SET ROLE indexed_cars_user;
 
 \i scripts/car_models.sql;
 
