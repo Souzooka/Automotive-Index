@@ -9,6 +9,19 @@ SET ROLE indexed_cars_user;
 DROP DATABASE IF EXISTS indexed_cars;
 CREATE DATABASE indexed_cars;
 
+\i scripts/car_models.sql;
+
+\i scripts/car_model_data.sql;
+\i scripts/car_model_data.sql;
+\i scripts/car_model_data.sql;
+\i scripts/car_model_data.sql;
+\i scripts/car_model_data.sql;
+\i scripts/car_model_data.sql;
+\i scripts/car_model_data.sql;
+\i scripts/car_model_data.sql;
+\i scripts/car_model_data.sql;
+\i scripts/car_model_data.sql;
+
 --reset to original user
 SET ROLE souzooka;
 
