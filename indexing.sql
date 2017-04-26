@@ -1,5 +1,11 @@
 CREATE INDEX make_code_idx
-  ON car_models;
+ON car_models (make_code); 
+
+CREATE INDEX model_code_idx
+ON car_models (model_code);
+
+CREATE INDEX year_code_idx
+ON car_models (year);
 
 --1 (67ms, 26ms).
 SELECT DISTINCT make_title
@@ -22,7 +28,7 @@ SELECT *
 FROM car_models
 WHERE year >= 2010 AND year <= 2015;
 
---5 (192ms).
+--5 (82ms).
 SELECT *
 FROM car_models
 WHERE year = 2010;
